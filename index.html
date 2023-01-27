@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>UniSportBuchung - Konfiguration</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <h3>Schritt 1:</h3>
+    Fülle das Formular mit den Daten, die du für die Unisportbuchung verwenden möchte aus.
+    <br />
+    <div id="formular">
+      <form>
+        <table>
+          <tr>
+            <td>
+              Geschlecht:
+            </td>
+            <td>
+              <input type="radio" id="W" name="sex" value="W" checked="checked">
+              <label for="W">weiblich</label>
+              <input type="radio" id="M" name="sex" value="M">
+              <label for="M">männlich</label>
+              <input type="radio" id="D" name="sex" value="D">
+              <label for="D">divers</label>
+              <input type="radio" id="X" name="sex" value="X">
+              <label for="X">keine Angabe</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="vorname">Vorname:</label>
+            </td>
+            <td>
+              <input type="text" size="35" id="vorname" name="vorname">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="name">Nachname:</label>
+            </td>
+            <td>
+              <input type="text" size="35" id="name" name="name">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="strasse">Straße Hausnummer:</label>
+            </td>
+            <td>
+              <input type="text" size="35" id="strasse" name="strasse">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="ort">PLZ Ort:</label>
+            </td>
+            <td>
+              <input type="text" size="35" id="ort" name="ort">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="statusorig">Status:</label>
+            </td>
+            <td>
+              <select id="statusorig" name="statusorig">
+                <option value="S-UNIW">Studierende/r der BU Wuppertal</option>
+                <option value="B-UNIW">Beschäftigte/r der BU Wuppertal</option>
+                <option value="Azubi">Azubi der BU Wuppertal</option>
+                <option value="Gaeste">Alumni/Gaeste</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="matnr">Matrikel-Nr:</label>
+            </td>
+            <td>
+              <input type="text" size="35" id="matnr" name="matnr">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="email">E-Mail:</label>
+            </td>
+            <td>
+              <input type="text" size="35" id="email" name="email">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="telefon">Telefonnummer:</label>
+            </td>
+            <td>
+              <input type="text" size="35" id="telefon" name="telefon">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="newsletter">Newsletter gewünscht:</label>
+            </td>
+            <td>
+              <input type="radio" id="news_yes" name="newsletter" value="ja">
+              <label for="news_yes">Ja</label>
+              <input type="radio" id="news_no" name="newsletter" value="" checked="checked">
+              <label for="news_no">Nein</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="iban">IBAN</label>
+            </td>
+            <td>
+              <input type="text" size="35" id="iban" name="iban">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="kontoinh">Kontoinhaber:</label>
+            </td>
+            <td>
+              <input type="text" size="35" id="kontoinh" name="kontoinh", value="nur ändern, falls nicht mit Teilnehmer/in identisch">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit" id="generate_buchung" name="generate_buchung" value="Buchungscode generieren!">
+            </td>
+            <td>
+              <input type="submit" id="generate_sportscard" name="generate_sportscard" value="Sportcard-Buchungscode generieren!">
+            </td>
+          </tr>
+        </table>
+      </form> 
+    </div>
+    <h3>Schritt 2:</h3>
+    Kopiere den unten stehenden Code jeweils in ein Lesezeichen. Der erste Code ist für die Buchung von gewöhnlichen Kursen, wobei
+    keine Kontoverbindung ausgefüllt werden muss. Der zweite Code ist für die Buchung der Sportscard, die eine Kontoverbindung benötigt.
+    <table>
+      <tr>
+        <td>
+          <textarea name="code_buchung" id="code_buchung" cols="90" rows="20"></textarea>
+        </td>
+        <td>
+          <textarea name="code_sportscard" id="code_sportscard" cols="90" rows="20"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Code Buchung von Kursen
+        </td>
+        <td>
+          Code Buchung der Sportscard
+        </td>
+      </tr>
+    </table>
+    <script src="generate_code.js"></script>
+  </body>
+</html>
